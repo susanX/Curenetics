@@ -32,14 +32,8 @@ class Results extends React.Component {
 
   getTrials = () => {
     const { postCode, age, gender } = this.props.userInfo;
-    //fetch('./quotes.json')
-    //const baseUrl = "../../../uk-Y018-2000-m-70.json/data/trials/uk/";
-    //const baseUrl = "http://jsonplaceholder.typicode.com/users";
     const baseUrl =
       "https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70.json/data/trials/uk/";
-    //const baseUrl = "https://githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70/";
-
-    // const baseUrl = "https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70.json/data/trials/uk/";
     const distance = "100";
     fetch(`${baseUrl}${postCode || "B152TH"}/${distance}/${gender || "m"}/${age || "70"}/.json`)
       .then(res => res.json())
