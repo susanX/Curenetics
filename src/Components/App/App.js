@@ -7,7 +7,7 @@ import BasicInfo from "../BasicInfo/BasicInfo";
 import SingleResult from "../SingleResult/SingleResult";
 import About from "../About/About";
 import Faq from "../Faq/Faq";
-import notFound from "../NotFound/NotFound";
+// import notFound from "../NotFound/NotFound";
 
 import "./app.css";
 import NotFound from "../NotFound/NotFound";

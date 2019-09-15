@@ -24,6 +24,7 @@ class Results extends React.Component {
     this.getTrials();
     const items = Object.keys(window.localStorage);
     const onlyTrials = items.filter(item => item.startsWith('"/trials/'));
+
     this.setState({
       recent: onlyTrials.length,
     });
@@ -31,11 +32,17 @@ class Results extends React.Component {
 
   getTrials = () => {
     const { postCode, age, gender } = this.props.userInfo;
-    const baseUrl = "https://curenetics-api.herokuapp.com/data/trials/uk/";
+    //fetch('./quotes.json')
+    const baseUrl = "./../uk-Y018-2000-m-70.json/data/trials/uk/";
+    //const baseUrl ="https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70.json/data/trials/uk/";
+    //const baseUrl = "https://githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70/";
+
+    // const baseUrl = "https://curenetics-api.herokuapp.com/data/trials/uk/";
     const distance = "100";
     fetch(`${baseUrl}${postCode || "B152TH"}/${distance}/${gender || "m"}/${age || "70"}/.json`)
       .then(res => res.json())
       .then(result => {
+        // mode: "no-cores",
         this.setState({
           results: result.results,
           isLoading: false,

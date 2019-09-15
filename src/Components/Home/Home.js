@@ -6,7 +6,7 @@ import "./home.css";
 const Home = () => {
   return (
     <section className="main-section home">
-      <h1>Hello, would you like help to find a clinical trial?</h1>
+      <h1>!!!!Hello, would you like help to find a clinical trial?</h1>
       <h2>Prostate cancer trials</h2>
 
       <button className="link-button medium-blue">
