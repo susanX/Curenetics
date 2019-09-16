@@ -38,10 +38,10 @@ class Results extends React.Component {
     //>>>>> This works in Postman and the url
     //https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70.json
 
-    const baseUrl = "https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70/";
+    const baseUrl = "https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70";
     
     const distance = "100";
-    fetch(`${baseUrl}${postCode || "B152TH"}/${distance}/${gender || "m"}/${age || "70"}/.json`)
+    fetch(`${baseUrl}${postCode || "B152TH"}/${distance}/${gender || "m"}/${age || "70"}.json`)
       .then(res => res.json())
       .then(result => {
         // mode: "no-cores",
