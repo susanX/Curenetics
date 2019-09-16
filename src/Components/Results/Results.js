@@ -32,7 +32,10 @@ class Results extends React.Component {
 
   getTrials = () => {
     const { postCode, age, gender } = this.props.userInfo;
-        
+    
+    //MONDAY 16 SEPT
+    //>>> fix: npm i autoprefixer@latest npm i caniuse-lite@latest and npm i caniuse-lite browserslist@latest
+   
     //>>>> This worked in February
     //const baseUrl = "https://curenetics-api.herokuapp.com/data/trials/uk/";
     //>>>>> This works in Postman and the url
