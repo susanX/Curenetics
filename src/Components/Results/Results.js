@@ -32,8 +32,14 @@ class Results extends React.Component {
 
   getTrials = () => {
     const { postCode, age, gender } = this.props.userInfo;
-    const baseUrl =
-      "https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70.json/data/trials/uk/";
+        
+    //>>>> This worked in February
+    //const baseUrl = "https://curenetics-api.herokuapp.com/data/trials/uk/";
+    //>>>>> This works in Postman and the url
+    //https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70.json
+
+    const baseUrl = "https://raw.githubusercontent.com/susanX/datatest/master/uk-Y018-2000-m-70/";
+    
     const distance = "100";
     fetch(`${baseUrl}${postCode || "B152TH"}/${distance}/${gender || "m"}/${age || "70"}/.json`)
       .then(res => res.json())
